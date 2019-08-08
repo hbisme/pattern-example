@@ -1,4 +1,4 @@
-package Decorator;
+package decorator;
 
 public class Hat extends ClothesDecorator {
     public Hat(Person person) {
