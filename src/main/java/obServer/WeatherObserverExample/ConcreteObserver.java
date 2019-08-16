@@ -1,4 +1,4 @@
-package ObServer.WeatherObserverExample;
+package obServer.WeatherObserverExample;
 
 /**
  * 具体的观察者对象,实现更新的方法,使自身的状态和目标的状态保持一致
