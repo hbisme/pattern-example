@@ -12,7 +12,6 @@ public class CarTimeProxy implements Moveable {
     }
 
     // 实现接口
-    @Override
     public void move() throws InterruptedException {
         System.out.println("汽车开始行驶...");
         Long begin = System.currentTimeMillis();
