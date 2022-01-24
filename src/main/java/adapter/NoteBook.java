@@ -22,7 +22,7 @@ public class NoteBook {
         // 两相的电源底座
         GBTwoPlug gbTwoPlug = new GBTwoPlug();
 
-        // 三相插头转两相插头适配器
+        // 两相插头转三相插头适配器
         ThreePlug threePlug = new TwoPlugAdapterToThree(gbTwoPlug);
         NoteBook noteBook = new NoteBook(threePlug);
         noteBook.charge();

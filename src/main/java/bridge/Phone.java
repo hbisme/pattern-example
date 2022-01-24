@@ -13,6 +13,8 @@ public abstract class Phone {
 
     public abstract void openSoftware();
 
+
+    // get-set...
     public String getSystem() {
         return system;
     }

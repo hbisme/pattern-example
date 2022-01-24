@@ -26,8 +26,7 @@ public class Client {
 
         context.setWheres(selectWhereMap);
         SelectSQLExpression selectSQLExpression = new SelectSQLExpression();
-        selectSQLExpression.interpret(context);
-
-
+        String selectStr = selectSQLExpression.interpret(context);
+        System.out.println(selectStr);
     }
 }

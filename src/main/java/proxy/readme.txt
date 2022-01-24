@@ -7,10 +7,10 @@
  代理对象 可以增加功能,比如: 电话购票, 也能减少功能,比如: 不能退票.
 
  一般分静态代理和动态代理:
- 静态代理: 代理和被代理对象在代理之前是确定的.他们都是实现相同的接口或者继承相同的抽象类.
-
+ 静态代理: 代理和被代理对象在代理之前是确定的.他们都是实现相同的接口或者继承相同的抽象类.在程序运行前就已经存在代理类的字节码文件.
 
  动态代理:
+    动态代理的源码是在程序运行期间由JVM根据反射等机制动态的生成，所以在运行前并不存在代理类的字节码文件.
     JDK 动态代理位于java.lang.reflect包下,一般主要涉及到以下两个类:
     1. Interface InvocationHandler: 该接口中仅定义了一个方法.
         public object invoke(Object obj, Method method, Object[] args)
@@ -33,7 +33,7 @@
         newProxyInstance(ClassLoader loader(被代理类的类加载器), Class[] interfaces(被代理类实现的接口), InvocationHandler h)
     4. 通过代理调用方法
 
-    JDK 动态代理与CGLIB动态代理区别
+JDK 动态代理与CGLIB动态代理区别
     1. JDK动态代理 只能代理实现类接口的类
     2. CGLIB动态代理针对类来实现代理的,对指定目标类产生一个子类,通过方法拦截技术,拦截所有父类方法的调用.
 

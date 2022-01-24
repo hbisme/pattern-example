@@ -29,7 +29,7 @@ public class InsertSQLExpression extends  SQLExpression{
                 .append(" values ")
                 .append(values);
 
-        System.out.println("Insert SQL : " + insert.toString());
+        System.out.println("interpret Insert SQL : " + insert.toString());
         return insert.toString();
 
 

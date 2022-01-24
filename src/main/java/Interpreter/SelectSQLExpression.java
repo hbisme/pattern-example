@@ -13,12 +13,12 @@ public class SelectSQLExpression extends SQLExpression {
 
         // StringBuilder keys = new StringBuilder();
         StringBuilder whereValues = new StringBuilder();
-        whereValues.append(" Where ");
+        whereValues.append(" WHERE ");
 
-        Map<String, Object> wheres = context.getWheres(); // new HashMap<String, Object>();
+        Map<String, Object> wheres = context.getWheres();
 
         for (String key : wheres.keySet()) {
-            whereValues.append(key).append(" = ").append(wheres.get(key)).append(" and ");
+            whereValues.append(key).append(" = ").append(wheres.get(key)).append(" AND ");
         }
 
         int size = whereValues.length();
@@ -26,7 +26,7 @@ public class SelectSQLExpression extends SQLExpression {
 
         select.append(whereValues);
 
-        System.out.println("Select SQL : " + select.toString());
+        System.out.println("interpret Select SQL : " + select.toString());
 
         return select.toString();
     }
