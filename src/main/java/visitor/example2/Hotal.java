@@ -4,17 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hotal {
-    private List<Company> companies = new ArrayList<>();
+    private List<CompanyVisitable> companies = new ArrayList<>();
+
+    public void add(CompanyVisitable companyVisitable) {
+        companies.add(companyVisitable);
+    }
 
     public void entertain(Vistor vistor) {
-        for (Company company : companies) {
-            company.accept(vistor);
+        for (CompanyVisitable companyVisitable : companies) {
+            companyVisitable.accept(vistor);
         }
     }
-
-    public void add(Company company) {
-        companies.add(company);
-    }
-
 
 }

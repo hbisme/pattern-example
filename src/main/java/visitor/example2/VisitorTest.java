@@ -14,7 +14,5 @@ public class VisitorTest {
 
         hotal.entertain(provincialLeaderVistor);
         hotal.entertain(nationalLeaderVistor);
-
-
     }
 }

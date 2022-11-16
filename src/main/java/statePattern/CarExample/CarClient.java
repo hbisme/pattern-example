@@ -18,7 +18,7 @@ public class CarClient {
 
 
 
-        System.out.println(car.getCarState());
+        System.out.println(car.getCarState().getStateName());
 
 
     }

@@ -3,6 +3,8 @@ package statePattern.CarExample;
 //    R  <-> P <-> N <-> D
 public class ParkState implements CarState {
 
+    private final String stateName = "P档";
+
 
     @Override
     public void switchPark(Car car) {
@@ -20,7 +22,6 @@ public class ParkState implements CarState {
     public void switchNeutral(Car car) {
         System.out.println("从P换到N档");
         car.setCarState(new NeutralState());
-
     }
 
     @Override
@@ -28,6 +29,10 @@ public class ParkState implements CarState {
         // P档到D档需要经过N档
         switchNeutral(car);
         car.switchD();
+    }
 
+    @Override
+    public String getStateName() {
+        return stateName;
     }
 }

@@ -2,6 +2,9 @@ package statePattern.CarExample;
 
 //    R  <-> P <-> N <-> D
 public class ReverseState implements CarState{
+
+    private final String stateName = "R档";
+
     @Override
     public void switchPark(Car car) {
         System.out.println("从R档换到P档位");
@@ -17,12 +20,16 @@ public class ReverseState implements CarState{
     public void switchNeutral(Car car) {
         switchPark(car);
         car.switchN();
-
     }
 
     @Override
     public void switchDrive(Car car) {
         switchNeutral(car);
         car.switchD();
+    }
+
+    @Override
+    public String getStateName() {
+        return stateName;
     }
 }

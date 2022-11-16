@@ -2,6 +2,9 @@ package statePattern.CarExample;
 
 //    R  <-> P <-> N <-> D
 public class DriveState implements CarState {
+
+    private final String stateName = "D档";
+
     @Override
     public void switchPark(Car car) {
         switchNeutral(car);
@@ -23,5 +26,10 @@ public class DriveState implements CarState {
     @Override
     public void switchDrive(Car car) {
         System.out.println("已经在D档,不能换档");
+    }
+
+    @Override
+    public String getStateName() {
+        return stateName;
     }
 }

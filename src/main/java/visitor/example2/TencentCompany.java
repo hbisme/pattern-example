@@ -1,6 +1,6 @@
 package visitor.example2;
 
-public class TencentCompany extends Company{
+public class TencentCompany extends CompanyVisitable {
     @Override
     public void accept(Vistor vistor) {
         vistor.visit(this);

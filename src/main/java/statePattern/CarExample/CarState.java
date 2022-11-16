@@ -6,6 +6,7 @@ public interface CarState {
     void switchNeutral(Car car);
     void switchDrive(Car car);
 
+    String getStateName();
 
 
 }
