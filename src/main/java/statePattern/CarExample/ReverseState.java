@@ -6,26 +6,26 @@ public class ReverseState implements CarState{
     private final String stateName = "R档";
 
     @Override
-    public void switchPark(Car car) {
+    public void switchPark(CarContext carContext) {
         System.out.println("从R档换到P档位");
-        car.setCarState(new ParkState());
+        carContext.setCarState(new ParkState());
     }
 
     @Override
-    public void switchReverse(Car car) {
+    public void switchReverse(CarContext carContext) {
         System.out.println("已经在R档,不能换挡");
     }
 
     @Override
-    public void switchNeutral(Car car) {
-        switchPark(car);
-        car.switchN();
+    public void switchNeutral(CarContext carContext) {
+        switchPark(carContext);
+        carContext.switchN();
     }
 
     @Override
-    public void switchDrive(Car car) {
-        switchNeutral(car);
-        car.switchD();
+    public void switchDrive(CarContext carContext) {
+        switchNeutral(carContext);
+        carContext.switchD();
     }
 
     @Override

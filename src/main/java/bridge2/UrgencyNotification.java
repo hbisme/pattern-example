@@ -7,7 +7,7 @@ public class UrgencyNotification extends Notification{
 
     @Override
     public void notify(String message) {
-        System.out.print("重要告警 -> ");
+        System.out.print("[重要告警] -> ");
         msgSender.send(message);
     }
 }

@@ -11,4 +11,8 @@ public class HuaGangGuanYu implements Visitable {
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
+
+    public String getView() {
+        return "花港观鱼的风景";
+    }
 }

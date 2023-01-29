@@ -7,28 +7,28 @@ public class ParkState implements CarState {
 
 
     @Override
-    public void switchPark(Car car) {
+    public void switchPark(CarContext carContext) {
         System.out.println("已经在P档了, 不能换挡");
 
     }
 
     @Override
-    public void switchReverse(Car car) {
+    public void switchReverse(CarContext carContext) {
         System.out.println("从P换到R档");
-        car.setCarState(new ReverseState());
+        carContext.setCarState(new ReverseState());
     }
 
     @Override
-    public void switchNeutral(Car car) {
+    public void switchNeutral(CarContext carContext) {
         System.out.println("从P换到N档");
-        car.setCarState(new NeutralState());
+        carContext.setCarState(new NeutralState());
     }
 
     @Override
-    public void switchDrive(Car car) {
+    public void switchDrive(CarContext carContext) {
         // P档到D档需要经过N档
-        switchNeutral(car);
-        car.switchD();
+        switchNeutral(carContext);
+        carContext.switchD();
     }
 
     @Override

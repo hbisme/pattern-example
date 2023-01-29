@@ -1,7 +1,7 @@
 package adapter;
 
 /*
-* 笔记本电脑类
+*  笔记本电脑类
 *  期望三项插座供电
 * */
 public class NoteBook {

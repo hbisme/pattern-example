@@ -21,5 +21,19 @@ public class Starter {
         alerts.add(urgencyNotification);
 
         alerts.forEach(x -> x.notify("发送告警"));
+
+        ///////////
+
+        System.out.println("---------");
+        ServerNotification serverNotification2 = new ServerNotification(emailMsgSender);
+        UrgencyNotification urgencyNotification2 = new UrgencyNotification(emailMsgSender);
+
+        List<Notification> alerts2 = new ArrayList<>();
+        alerts2.add(serverNotification2);
+        alerts2.add(urgencyNotification2);
+
+        alerts2.forEach(x -> x.notify("发送告警"));
+
+
     }
 }

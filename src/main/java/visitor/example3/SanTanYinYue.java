@@ -11,4 +11,9 @@ public class SanTanYinYue implements Visitable {
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
+
+    public String getViewName() {
+        return "三潭印月的风景";
+    }
+
 }

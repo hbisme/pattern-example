@@ -3,22 +3,22 @@ package statePattern.CarExample;
 //    R  <-> P <-> N <-> D
 public class CarClient {
     public static void main(String[] args) {
-        Car car = new Car();
+        CarContext carContext = new CarContext();
 
-        car.switchN();
-        car.switchN();
-        car.switchP();
-        car.switchD();
-        car.switchR();
-        car.switchN();
+        carContext.switchN();
+        carContext.switchN();
+        carContext.switchP();
+        carContext.switchD();
+        carContext.switchR();
+        carContext.switchN();
 
-        car.switchP();
-        car.switchD();
-
-
+        carContext.switchP();
+        carContext.switchD();
 
 
-        System.out.println(car.getCarState().getStateName());
+
+
+        System.out.println(carContext.getCarState().getStateName());
 
 
     }

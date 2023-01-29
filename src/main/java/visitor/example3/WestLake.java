@@ -12,9 +12,8 @@ import java.util.List;
 public class WestLake {
     List<Visitable> list = new ArrayList<Visitable>();
 
-    public List<Visitable> addElement(Visitable visitable) {
+    public void addElement(Visitable visitable) {
         list.add(visitable);
-        return list;
     }
 
 
