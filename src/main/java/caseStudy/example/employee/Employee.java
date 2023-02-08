@@ -1,6 +1,8 @@
 package caseStudy.example.employee;
 
-import caseStudy.example.pay.PayMode;
+import caseStudy.example.payclassification.PaymentClassification;
+import caseStudy.example.paymentSchedule.PaymentSchedule;
+import caseStudy.example.paymethod.PayMode;
 
 /**
  * @author hubin
@@ -11,7 +13,14 @@ public abstract class Employee {
     private String name;
     private String address;
 
+    // 支付方式
     private PayMode payMode;
+
+    // 支付策略
+    private PaymentClassification paymentClassification;
+
+    // 支付时间
+    private PaymentSchedule paymentSchedule;
 
 
     public Employee(String name) {
@@ -22,6 +31,13 @@ public abstract class Employee {
         return name;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
 
     public PayMode getPayMode() {
@@ -32,12 +48,20 @@ public abstract class Employee {
         this.payMode = payMode;
     }
 
-    public String getAddress() {
-        return address;
+    public PaymentClassification getPaymentClassification() {
+        return paymentClassification;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setPaymentClassification(PaymentClassification paymentClassification) {
+        this.paymentClassification = paymentClassification;
+    }
+
+    public PaymentSchedule getPaymentSchedule() {
+        return paymentSchedule;
+    }
+
+    public void setPaymentSchedule(PaymentSchedule paymentSchedule) {
+        this.paymentSchedule = paymentSchedule;
     }
 
     abstract public void pay();

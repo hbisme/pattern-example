@@ -1,4 +1,4 @@
-package caseStudy.example.pay;
+package caseStudy.example.paymethod;
 
 /**
  *
